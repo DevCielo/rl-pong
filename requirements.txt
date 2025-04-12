@@ -3,6 +3,7 @@ ale-py==0.10.2
 tensorboard==2.19.0
 opencv-python==4.11.0.86
 pygame
+numpy
 --extra-index-url https://download.pytorch.org/whl/cull8
 torch
 torchvision
