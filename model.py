@@ -66,3 +66,7 @@ class Model(nn.Module):
             print(f"Model loaded from {filename}")
         except FileNotFoundError:
             print(f"Model file {filename} not found.")
+
+def soft_update(target, source, tau=0.005):
+    for target_param, param in zip(target.parameters(), source.parameters()):
+        target_param.data.copy_(target_param.data * (1.0 - tau) + target_param.data * tau)
